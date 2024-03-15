@@ -7,11 +7,25 @@
     <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
     <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
     <title>PyScript-Web</title>
+    <py-env>
+        - numpy
+        - mathplotlib
+    </py-env>
 </head>
 
 <body>
-    <py-script>
-        print("I don't know what the heck is going on!" * 20)
+    <h1>let's plot a random number!</h1>
+    <div id="plot"></div>
+    <py-script output="plot">
+        import mathplotlib.pyplot as plt
+        import numpy as np
+
+        x = np.random.randn(1000)
+        y = np.random.randn(1000)
+
+        fig, ax = plot.subplots()
+        ax.scatter(x, y)
+        fig
     </py-script>
 </body>
 
