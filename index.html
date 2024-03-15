@@ -7,21 +7,22 @@
     <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
     <py-env>
         - numpy
-        - mathplotlib
+        - matplotlib
     </py-env>
 </head>
 
 <body>
     <h1>let's plot a random number!</h1>
+    <h2>I'm sorry to say this, but your are so stupid!</h2>
     <div id="plot"></div>
     <py-script output="plot">
-import mathplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 import numpy as np
 
 x = np.random.randn(10)
 y = np.random.randn(10)
 
-fig, ax = plot.subplots()
+fig, ax = plt.subplots()
 ax.scatter(x, y)
 fig
     </py-script>
