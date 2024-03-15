@@ -17,15 +17,15 @@
     <h1>let's plot a random number!</h1>
     <div id="plot"></div>
     <py-script output="plot">
-        import mathplotlib.pyplot as plt
-        import numpy as np
+import mathplotlib.pyplot as plt
+import numpy as np
 
-        x = np.random.randn(10)
-        y = np.random.randn(10)
+x = np.random.randn(10)
+y = np.random.randn(10)
 
-        fig, ax = plot.subplots()
-        ax.scatter(x, y)
-        fig
+fig, ax = plot.subplots()
+ax.scatter(x, y)
+fig
     </py-script>
 </body>
 
